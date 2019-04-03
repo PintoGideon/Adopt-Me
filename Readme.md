@@ -136,4 +136,9 @@ Refs are created using React.createRef() and attached to React elements via the 
 
 ![Carousel](https://user-images.githubusercontent.com/15992276/55453939-e3bb9200-55ab-11e9-974b-befc444b8a73.JPG)
 
+# Modal
+
+![Modal](https://user-images.githubusercontent.com/15992276/55454187-e4085d00-55ac-11e9-81c4-b28b46726c31.JPG)
+
+
 
