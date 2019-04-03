@@ -1,3 +1,13 @@
+# How to run the app
+Get your API credentials from https://www.petfinder.com/ and place them in the .env file.
+npm install
+npm run dev
+Happy Exploring !!
+
+# Credits: 
+This app was created in a code along workshop titled "Intro to React v5" by Brian Holt from Front End Masters.
+
+
 # A complete guide to React
 
 An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:
@@ -61,6 +71,7 @@ Do not put hooks inside conditionals.
 Here we're using an effect to retrieve a list of breeds from the API. An effect is run after every render (which happens after state changes.) You're going to use effects to do things like AJAX calls, modify ambient state, integrate with other libraries, and many other things. Basically it's a way to delay work until after render happens and to deal with asynchronous side effects.
 
 # Reach Router
+example: https://reach.tech/router/example/basic
 
 # React Life Cycle Methods
 
@@ -99,7 +110,7 @@ All consumers that are descendants of a Provider will re-render whenever the Pro
 
 We want the modal to render above the root element.
 
-#useRef hook
+# useRef hook
 
 Refs provide a way to access DOM nodes or React elements created in the render
 method.
