@@ -119,4 +119,21 @@ In the typical React dataflow, props are the only way that parent components int
 
 Refs are created using React.createRef() and attached to React elements via the ref attribute. Refs are commonly assigned to an instance property when a component is constructed so they can be referenced throughout the component.
 
+# Home Page
+
+![Home Page](https://user-images.githubusercontent.com/15992276/55453865-a2c37d80-55ab-11e9-8ce3-cffd4cd00093.JPG)
+
+# Results Page
+
+![Results Page](https://user-images.githubusercontent.com/15992276/55453894-bd95f200-55ab-11e9-8529-45e4689de155.JPG)
+
+# Details Page
+
+![Details](https://user-images.githubusercontent.com/15992276/55453911-cbe40e00-55ab-11e9-865f-d841505a0356.JPG)
+
+
+# Carousel Page
+
+![Carousel](https://user-images.githubusercontent.com/15992276/55453939-e3bb9200-55ab-11e9-974b-befc444b8a73.JPG)
+
 
