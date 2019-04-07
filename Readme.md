@@ -12,11 +12,11 @@ This app was created in a code along workshop titled "Intro to React v5" by Bria
 
 An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:
 
-static getDerivedStateFromProps()
-shouldComponentUpdate()
-render()
-getSnapshotBeforeUpdate()
-componentDidUpdate()
+1. static getDerivedStateFromProps()
+2. shouldComponentUpdate()
+3. render()
+4 getSnapshotBeforeUpdate()
+5 componentDidUpdate()
 
 # npm
 
@@ -38,7 +38,7 @@ Parcel is a relatively new bundler for JavaScript projects. Parcel is an amazing
 
 # React Hooks
 
-React does not support 2-way data binding. Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
+Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
 
 ```
 
