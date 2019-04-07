@@ -15,8 +15,8 @@ An update can be caused by changes to props or state. These methods are called i
 1. static getDerivedStateFromProps()
 2. shouldComponentUpdate()
 3. render()
-4 getSnapshotBeforeUpdate()
-5 componentDidUpdate()
+4. getSnapshotBeforeUpdate()
+5. componentDidUpdate()
 
 # npm
 
