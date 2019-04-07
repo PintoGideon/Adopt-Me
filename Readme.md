@@ -8,7 +8,7 @@ Get your API credentials from https://www.petfinder.com/ and place them in the .
 This app was created in a code along workshop titled "Intro to React v5" by Brian Holt from Front End Masters.
 
 
-# A complete guide to React
+# Notes from the workshop and snapshots of the finished application
 
 An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:
 
