@@ -2,7 +2,7 @@
 Get your API credentials from https://www.petfinder.com/ and place them in the .env file.
 1. npm install
 2. npm run dev
-Happy Exploring !!
+3. Happy Exploring !!
 
 # Credits: 
 This app was created in a code along workshop titled "Intro to React v5" by Brian Holt from Front End Masters.
