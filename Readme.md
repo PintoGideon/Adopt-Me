@@ -1,7 +1,7 @@
 # How to run the app
 Get your API credentials from https://www.petfinder.com/ and place them in the .env file.
-npm install
-npm run dev
+1. npm install
+2. npm run dev
 Happy Exploring !!
 
 # Credits: 
