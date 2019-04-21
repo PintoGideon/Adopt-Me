@@ -40,7 +40,7 @@ Parcel is a relatively new bundler for JavaScript projects. Parcel is an amazing
 
 Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
 
-```
+```javascript
 
 import React, { useState } from 'react';
 
@@ -97,7 +97,7 @@ Error boundaries are React components that catch JavaScript errors anywhere in t
 
 Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language
 
-```
+```javascript
 
 const myContext=React.createContext(defaultValue)
 <MyContext.Provider value={/* some value */}>
