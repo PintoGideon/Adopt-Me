@@ -8,10 +8,10 @@ class Carousel extends Component {
 	};
 
 	static getDerivedStateFromProps({ media }) {
-		let photos = [];
+		let photos = ['http://placecorgi.com/600/600'];
 
-		if (media && media.photos && media.photos.photo) {
-			photos = media.photos.photo.filter(photo => photo['@size'] === 'pn');
+		if (media.length) {
+			photos = media.map(({ large }) => large);
 		}
 		return { photos };
 	}
@@ -28,7 +28,7 @@ class Carousel extends Component {
 		return (
 			<ErrorBoundary>
 				<div className="carousel">
-					<img src={photos[active].value} alt="animal" />
+					<img src={photos[active]} alt="animal" />
 					<div className="carousel-smaller">
 						{photos.map((photo, index) => (
 							//eslint-disable-next-line

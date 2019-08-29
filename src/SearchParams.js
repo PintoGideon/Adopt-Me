@@ -1,17 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-import pf, { ANIMALS } from 'petfinder-client';
+import pet, { ANIMALS } from '@frontendmasters/pet';
 import useDropdown from './useDropdown';
 import Results from './Results';
 import ThemeContext from './ThemeContext';
 
-const petfinder = pf({
-	key: process.env.API_KEY,
-	secret: process.env.API_SECRET
-});
-
 const SearchParams = () => {
 	const [theme, setTheme] = useContext(ThemeContext);
 	const [location, setLocation] = useState('Seattle, WA');
+
 	const [breeds, setBreeds] = useState([]);
 
 	const [animal, AnimalDropdown] = useDropdown('Animal', 'dog', ANIMALS);
@@ -20,34 +16,26 @@ const SearchParams = () => {
 	const [pets, setPets] = useState([]);
 
 	async function requestPets() {
-		const res = await petfinder.pet.find({
+		const { animals } = await pet.animals({
 			location,
 			breed,
-			animal,
-			output: 'full'
+			type: animal
 		});
 
 		//This is going to be an array of pets returned from the API
 
-		setPets(
-			Array.isArray(res.petfinder.pets.pet)
-				? res.petfinder.pets.pet
-				: [res.petfinder.pets.pet]
-		);
+		setPets(animals || []);
 	}
 
 	useEffect(() => {
 		setBreeds([]);
 		setBreed('');
 
-		petfinder.breed.list({ animal }).then(data => {
-			setBreeds(
-				Array.isArray(data.petfinder.breeds.breed)
-					? data.petfinder.breeds.breed
-					: [data.petfinder.breeds.breed]
-			);
-		});
-	}, [animal]);
+		pet.breeds(animal).then(({ breeds }) => {
+			const breedStrings = breeds.map(({ name }) => name);
+			setBreeds(breedStrings);
+		}, console.error);
+	}, [animal, setBreed, setBreeds]);
 
 	return (
 		<div className="search-params">
