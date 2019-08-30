@@ -1,5 +1,7 @@
-import React from 'react';
+import { createContext } from 'react';
 
-const ThemeContext = React.createContext(['green'], () => {});
+// We pass in a hook and a updater function.
+
+const ThemeContext = createContext(['peru'], () => {});
 
 export default ThemeContext;

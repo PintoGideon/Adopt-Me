@@ -6,10 +6,10 @@ import { Router, Link } from '@reach/router';
 import ThemeContext from './ThemeContext';
 
 const App = () => {
-	const theme = useState('peru');
+	const themeHook = useState('cyan');
 
 	return (
-		<ThemeContext.Provider value={theme}>
+		<ThemeContext.Provider value={themeHook}>
 			<div>
 				<header>
 					<Link to="/">Adopt Me</Link>
