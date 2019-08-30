@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
-import pet from '@frontendmasters/pet';
+import pet, { Photo } from '@frontendmasters/pet';
 import Carousel from './Carousel';
 import ThemeContext from './ThemeContext';
-import { navigate } from '@reach/router';
+import { navigate, Router, RouteComponentProps } from '@reach/router';
 import Modal from './Modal';
 
-class Details extends Component {
-	constructor(props) {
-		super(props);
+class Details extends Component<
+	RouteComponentProps<{
+		id: string;
+	}>
+> {
+	public state = {
+		name: '',
+		animal: '',
+		media: [] as Photo[],
+		breed: '',
+		location: '',
+		url: '',
+		loading: true,
+		showModal: false,
+		description: ''
+	};
 
-		this.state = {
-			loading: true,
-			showModal: false
-		};
-	}
-	componentDidMount() {
-		pet.animal(this.props.id).then(({ animal }) => {
+	public componentDidMount() {
+		if (!this.props.id) {
+			navigate('/');
+			return;
+		}
+
+		pet.animal(+this.props.id).then(({ animal }) => {
 			this.setState({
 				url: animal.url,
 				name: animal.name,

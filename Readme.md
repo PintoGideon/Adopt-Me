@@ -1,12 +1,14 @@
 # How to run the app
+
 Get your API credentials from https://www.petfinder.com/ and place them in the .env file.
+
 1. npm install
 2. npm run dev
 3. Happy Exploring !!
 
-# Credits: 
-This app was created in a code along workshop titled "Intro to React v5" by Brian Holt from Front End Masters.
+# Credits:
 
+This app was created in a code along workshop titled "Intro to React v5" by Brian Holt from Front End Masters.
 
 # Notes from the workshop and snapshots of the finished application
 
@@ -34,30 +36,24 @@ Parcel is a relatively new bundler for JavaScript projects. Parcel is an amazing
 
     npm install -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
 
-
-
 # React Hooks
 
 Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
 
 ```javascript
-
 import React, { useState } from 'react';
 
-  function Example() {
-    // Declare a new state variable, which we'll call "count"
-    const [count, setCount] = useState(0);
+function Example() {
+	// Declare a new state variable, which we'll call "count"
+	const [count, setCount] = useState(0);
 
-    return (
-        <div>
-        <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-        Click me
-        </button>
-        </div>
-);
+	return (
+		<div>
+			<p>You clicked {count} times</p>
+			<button onClick={() => setCount(count + 1)}>Click me</button>
+		</div>
+	);
 }
-
 ```
 
 ```
@@ -71,6 +67,7 @@ Do not put hooks inside conditionals.
 Here we're using an effect to retrieve a list of breeds from the API. An effect is run after every render (which happens after state changes.) You're going to use effects to do things like AJAX calls, modify ambient state, integrate with other libraries, and many other things. Basically it's a way to delay work until after render happens and to deal with asynchronous side effects.
 
 # Reach Router
+
 example: https://reach.tech/router/example/basic
 
 # React Life Cycle Methods
@@ -131,7 +128,6 @@ Refs are created using React.createRef() and attached to React elements via the 
 
 ![Details](https://user-images.githubusercontent.com/15992276/55453911-cbe40e00-55ab-11e9-865f-d841505a0356.JPG)
 
-
 # Carousel Page
 
 ![Carousel](https://user-images.githubusercontent.com/15992276/55453939-e3bb9200-55ab-11e9-974b-befc444b8a73.JPG)
@@ -140,5 +136,11 @@ Refs are created using React.createRef() and attached to React elements via the 
 
 ![Modal](https://user-images.githubusercontent.com/15992276/55454187-e4085d00-55ac-11e9-81c4-b28b46726c31.JPG)
 
+### Definitely Typed
 
+Packages like React are not written in React. Definitely typed is a project that allows developers to write types for packages they don't control.
 
+```javascript
+npm install -D @types/react
+
+```
