@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-hooks/exhausive-depths
 import React, { Component } from 'react';
 import ErrorBoundary from './ErrorBoundary';
 

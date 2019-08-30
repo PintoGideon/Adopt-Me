@@ -141,4 +141,9 @@ Refs are created using React.createRef() and attached to React elements via the 
 ![Modal](https://user-images.githubusercontent.com/15992276/55454187-e4085d00-55ac-11e9-81c4-b28b46726c31.JPG)
 
 
+### Intermediate React
+
+Code splitting is important if you want
+to defer the loading to later. The page size of the first load is small and hence it is quick.
+
 
