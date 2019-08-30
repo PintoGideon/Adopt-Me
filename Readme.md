@@ -142,3 +142,10 @@ Refs are created using React.createRef() and attached to React elements via the 
 
 
 
+### Why do we need Server Side Rendering?
+
+It allows us to write all our application in React, pre-render everything and then send the user the complete markup and React will take over the page once it's finished loading.
+
+Hyrate is a special function like render which takes the markup of what's already there and renders it.
+
+Also, you should not be referencing documents in the file. 
